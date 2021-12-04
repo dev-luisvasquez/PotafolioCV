@@ -11,47 +11,47 @@ body{
       background-color: #0e2c40;
 }
 
+.container{
+      width: 90%;
+      height: 90%;
+      display: contents;
+      align-content: center;
+      background-color: aqua;
 
-.fondo img{
-      width: 100%;
-      height: 800px;
-      margin-top: 50px;
       
 }
 
+/* header*/
 .header{
       width: 100%;
       height: 90px;
-      background-color: #148d8d;
-      position: fixed;
+      background-color: #148d8d55;
+      backdrop-filter: blur(0.5rem);
+      position:fixed;
       top: 0;
       left: 0;
       box-shadow: 0px 1px 10px rgb(15, 14, 14);
       font-family: 'Raleway', sans-serif;
-}
-
-.container{
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
+      
 }
 
 .logo{
       float: left;
-      line-height: 90px;
+      line-height: 80px;
+      margin-left: 20%;
 }
 
 .logo h1{
       color: white;
       font-weight: bold;
       font-size: 40px;
-      cursor: default;
-    
+      cursor: default;  
 }
 
 .menu{
       float: right;
       line-height: 100px;
+
 
 }
 
@@ -66,6 +66,7 @@ body{
       border-radius: 5px;
       text-transform: uppercase;
       font-weight: bolder;
+
 }
 
 .menu i{
@@ -79,14 +80,21 @@ body{
       transition: 1s;
 }
 
+/* banner*/
 .banner{
       background-image:url("../img/origen-nombres-informatica-nunca-hubieras-imaginado_2.jpg");
       background-size: cover;
-      min-height: 90vh;
-      background-color: rgba(0, 0, 0, 0.075);
+      min-height: 75vh;
+      background-color: rgba(0, 0, 0, 0.63);
       background-blend-mode: soft-light;
       animation: banner 35s infinite linear;
       font-family: 'Raleway', sans-serif;
+}
+
+.banner-description{
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
 }
 
 @keyframes banner{ 
@@ -117,15 +125,15 @@ body{
   }
   
 
-.banner .banner-text{
+.banner-text{
       width: 100%;
       height: auto;
       font-weight: bold;
       color: white;
       display: flex;
       justify-content: center;
-      line-height:80px;
-      font-size: 300%;
+      line-height:85px;
+      font-size: 50px;
       position:relative;
       top: 250px;
       margin: 0 auto;
@@ -137,14 +145,15 @@ body{
       color: #9a336f;
       padding-left: 10px;
       list-style: none; /*quitamos los puntos de la lista*/
-      animation: change-banner-text-ul 6s infinite;
+      animation: change-banner-text-ul 8s infinite;
       height: 60px;
   }
   
   @keyframes change-banner-text-ul{
       0%{margin-top: 0;}
-      50%{margin-top: -80px;}
-      80%{margin-top: -160px;}
+      40%{margin-top: -80px;}
+      60%{margin-top: -160px;}
+      80%{margin-top: -250px;}
       100%{margin-top: 0;}
   }
   
@@ -155,6 +164,40 @@ body{
       text-align: center;
       font-size: 150%;
   }
+/* fin banner*/
+
+
+/* Estructura*/
+
+#title{
+      width: 50%;
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      font-weight: bold;
+      font-size: 200%;
+      background-color: #35649e;
+      border-radius: 5px;
+      margin: 0 auto;
+      margin-top: 20px;
+      padding: 20px;   
+}
+
+.me{
+      width: 50%;
+      margin: 5%;
+}
+.me p{
+
+      color:#fff;
+      font-size: 200%;
+      text-align: start;
+      font-family: 'Raleway' ,sans-serif;
+      font-weight: bolder;
+}
+
+
+/* fin Estructura*/
   
   
 
@@ -172,34 +215,52 @@ body{
 
 
 @media screen and (max-width: 1024px){
-      .fondo img{
-            width: 100%;
-            height: 500px;
-      }
-
-      .menu a{
-            font-size: 10px ;
-      }
+      
 
       .logo h1{
             font-size: 20px;
+            margin-left: -50%;
       }
       
-      .banner .banner-text{
+      .banner{
             width: 100%;
-            height: auto;
-            font-weight: bold;
-            color: white;
-            display: flex;
-            justify-content: center;
-            line-height:70px;
-            font-size: 20px;
-            position:relative;
-            top: 250px;
-            margin: 0 auto;
-            overflow: hidden;
-            background-color: #273a75e1;
+            background-position: center;
       }
+      .me{
+            width: 90%;
+      }
+
+      #title{
+            width: 80%;
+      }
+
       
       
 }
+
+@media (max-width: 768px) {
+      .banner .banner-text{
+          font-size: 130%; /*tamaño texto del banner*/
+      }
+      .banner .banner-description{
+          font-size: 120%; /*tamaño texto del banner*/
+      }
+  }
+  
+  @media (max-width: 460px) {
+      .banner .banner-text{
+          font-size: 120%; /*tamaño texto del banner*/
+      }
+      .banner .banner-description{
+          font-size: 110%; /*tamaño texto del banner*/
+      }
+  }
+  
+  @media only screen and (min-device-width : 280px) and (max-device-width : 459px) {
+      .banner .banner-text{
+          font-size: 90%; /*tamaño texto del banner*/
+      }
+      .banner .banner-description{
+          font-size: 80%; /*tamaño texto del banner*/
+      }
+  }
