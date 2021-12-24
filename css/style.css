@@ -186,6 +186,7 @@ body{
 .me{
       width: 50%;
       margin: 5%;
+      float: left;
 }
 .me p{
 
@@ -194,6 +195,24 @@ body{
       text-align: start;
       font-family: 'Raleway' ,sans-serif;
       font-weight: bolder;
+      
+}
+
+.imgme{
+      width: 60%;
+      float: right;
+      height: 50%;
+      
+      
+}
+
+.content{
+      font-size: 200%;
+      color: #fff;
+      background: #9a336f;
+      width: 90%;
+
+
 }
 
 
@@ -215,13 +234,10 @@ body{
 
 
 @media screen and (max-width: 1024px){
-      
-
       .logo h1{
             font-size: 20px;
             margin-left: -50%;
-      }
-      
+      }  
       .banner{
             width: 100%;
             background-position: center;
@@ -229,9 +245,14 @@ body{
       .me{
             width: 90%;
       }
-
       #title{
             width: 80%;
+      }
+      .imgme{
+            width: 90%;
+            height: 90%;
+            
+            
       }
 
       
