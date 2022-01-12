@@ -1,0 +1,602 @@
+*{
+    border: 0;
+    margin: 0;
+    border: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    text-rendering: optimizeLegibility;
+    font-size: 16px; /*tamaño total de la letra 16px = 100%*/
+    font-family: 'Work Sans','Arial', sans-serif; /*tipo de letra a usar*/
+}
+
+body::-webkit-scrollbar {
+    width: 1.1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ff9800;
+    outline: 1px solid #ff9800;
+}
+
+.header{
+    background-color: #0000003f; /*color del header*/
+    backdrop-filter: blur(0.8rem); /*transparencia del color*/
+    height: 80px; /*altura del header*/
+    position: fixed; /*fijamos header a la pantalla*/
+    width: 100%; /*ancho del 100% del header*/
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.header .nav{
+    display: flex; /*formato flex*/
+    justify-content: space-between; /*separamos los elementos del nav*/
+    max-width: 1500px; /*ancho del nav con límite para pantallas grandes*/
+    margin: 0 auto; /*centramos los elementos del nav*/
+}
+
+.header .nav .logo{
+    font-size: 200%; /*30px tamaño letra 1.875em*/
+    font-weight: bold; /*grosor letra*/
+    padding: 0 2.500em; /*40px de ancho*/
+    line-height: 80px; /*alto de linea, logo centrado en el header*/
+    text-decoration: none; /*quitamos la linea debajo del logo*/
+    color: white; /*color del logo*/
+}
+
+.header .nav .nav-toggle{
+    color: white; /*color de rayas del menu*/
+    background: none; /*quitamos el background*/
+    border: none; /*quitamos los bordes del botón menu*/
+    font-size: 1.875em; /*30px tamaño letra*/
+    padding: 0 1.250em; /*relleno de 20px a los lados*/ 
+    line-height: 60px; /*alto de linea, menu centrado en el header versión movil*/
+    cursor: pointer; /*hacemos el boton clickeable*/
+    display: none; /*lo ocultamos en modo escritorio*/
+}
+
+.header .nav .nav-menu{
+    display: flex; /*formato flex*/
+    margin-right: 2.500em; /*distancia de elementos y margen derecho*/
+    list-style: none; /*quitamos los puntos de los elementos*/
+}
+
+.header .nav .nav-menu .nav-menu-item{
+    font-size: 100%; /*18px  1.125em tamaño elementos del nav */
+    margin: 0 0.625em; /*10px de margen entre cada elemento del nav*/
+    line-height: 80px; /*alto de linea, elementos centrados en el header*/
+    text-transform: uppercase; /*texto en mayusculas*/
+    width: max-content; /*los elementos se muestran hacia el lado y no hay salto de linea por palabra*/
+}
+
+.header .nav .nav-menu .nav-menu-item a{
+    color: white; /*color blanco los elementos del nav-menu*/
+    text-decoration: none; /*quitamos la linea debajo de cada elemento*/
+    padding: 0.500em 0.750em; /*relleno de 8px arriba abajo y 12 a los lados*/
+    border-radius: 3px; /*borde del padding/relleno*/
+}
+
+.header .nav .nav-menu .nav-menu-item a:hover{
+    background-color: #ff9800; /*color en el padding al pasar el mouse en los elementos del nav*/
+    transition: 0.5s; /*transición al pasar el mouse por cada elemento del nav*/
+}
+
+.banner{
+    background-image: url(../images/banner1.webp) ; /*imagen de fondo banner*/
+    background-size: cover; /*la imagen se expande a la pantalla*/
+    min-height: 100vh;/*altura del 100 del viewport del dispositivo*/
+    
+    background-color: rgb(30, 30, 30); /*color de fondo*/
+    background-blend-mode: soft-light; /*propiedad de color*/
+    animation: banner 25s infinite linear; /*animación que llama a banner, 25seg, infinito */
+}
+
+/*permite controlar la frecuencia de las imágenes*/
+@keyframes banner{ 
+    0%{ 
+      background-image: url(../images/banner1.webp); 
+    } 
+    16%{ 
+      background-image: url(../images/banner1.webp);
+    }
+    29%{ 
+        background-image: url(../images/banner2.webp);
+    }
+    40%{ 
+        background-image: url(../images/banner2.webp);
+    }
+    52%{ 
+        background-image: url(../images/banner3.webp);
+    }
+    64%{ 
+        background-image: url(../images/banner3.webp);
+    } 
+    79%{ 
+      background-image: url(../images/banner4.webp); 
+    } 
+    100%{ 
+      background-image: url(../images/banner4.webp); 
+    } 
+}
+
+.banner .banner-text{
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    line-height:80px;
+    font-size: 300%;
+    position:relative;
+    top: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.banner .banner-text ul{
+    color: #ff9800;
+    padding-left: 10px;
+    list-style: none; /*quitamos los puntos de la lista*/
+    animation: change-banner-text-ul 6s infinite;
+    height: 80px;
+}
+
+@keyframes change-banner-text-ul{
+    0%{margin-top: 0;}
+    50%{margin-top: -80px;}
+    80%{margin-top: -160px;}
+    100%{margin-top: 0;}
+}
+
+.banner .banner-description{
+    position: relative;
+    top: 280px;
+    color: white;
+    text-align: center;
+    font-size: 150%;
+}
+
+.about{
+    background: #1f4277;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.about h1{
+    font-size: 200%;
+    color: #fff;
+    background-color: #ff9800;
+    font-weight: bold;
+    padding: 7px 5px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.about .about-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .about-content .about-text{
+    margin: 0 50px;
+}
+
+.about .about-content .about-text p{
+    font-size: 150%;
+    color:whitesmoke ;
+}
+
+.about .about-content .about-text .btn{
+    background: #ff9800; /*color fondo del botón*/
+    display: inline-block; /*elemento en linea con formato blockdonde se pueden aplicar valores height y width*/
+    color:#fff; /*color letra*/
+    margin-top: 1.250em; /*margen de arriba 20px*/
+    padding: 0.625em 1.875em; /*relleno de 10px arriba abajo y 30px a los lados*/
+    font-size: 1.125em; /*18px - tamaño letra*/
+    text-transform: uppercase; /*letras en mayúsculas*/
+    text-decoration: none; /*quitamos subrayado*/
+    letter-spacing: 0.125em; /*2px - espacio entre letras*/ 
+}
+
+.w50{
+    min-width: 50%; /*mínimo de ancho 50%*/
+}
+  
+img{
+    max-width: 100%;
+}
+
+.skills{
+    background: #9d5bb5;
+    text-align: center;
+    padding: 20px 0;
+    color: whitesmoke;
+    overflow: hidden;
+}
+
+.skills h1{
+    font-size: 200%;
+}
+
+.skills h1 span{
+    color: #00ddb9;
+}
+
+.skills p{
+    font-size: 150%;
+}
+
+.skills .skills-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 15px;
+  }
+
+.skills .skills-content .skills-text{
+    padding: 8px  40px;
+    color: whitesmoke;
+    max-width: 240px;
+    margin: 25px;
+    background: #557dce;
+    border-radius: 15px;
+}
+
+.skills .skills-content .skills-text h2{
+    font-size: 150%;
+}
+
+.skills .skills-content .skills-text p{
+    font-size: 100%;
+}
+
+.skills .skills-content .skills-text img{
+    height: 35%;
+}
+
+.knowledge{
+    background: #2d2f2e;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.knowledge h1{
+    font-size: 200%;
+    color: whitesmoke;
+}
+
+.knowledge h1 span{
+    color: #00ddb9;
+}
+
+.knowledge p{
+    font-size: 150%;
+    color: whitesmoke;
+}
+
+.knowledge .knowledge-tittle{
+    align-items: center;
+    padding: 10px 0;
+}
+
+.knowledge .knowledge-tittle h2{
+    font-size: 180%;
+    color: #fff;
+    background-color: #1887b3;
+    font-weight: bold;
+    padding: 7px 5px;
+    width: max-content;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.knowledge .knowledge-content{
+    display: flex;
+    padding: 15px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.knowledge .knowledge-content .image-box {
+    height: 100px;
+    width: 100px;
+    margin: 5px 10px;
+}
+  
+.knowledge .knowledge-content .image-box img {
+    height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 50%;
+    background: black;
+    /* box-shadow: 0 0.2rem 1rem 0.3rem rgb(0 255 254 / 35%) !important; */
+    transition: 0.3s ease-in-out;
+}
+
+.knowledge .knowledge-content .image-box img:hover {
+    transform: translateY(-8px);
+    filter: brightness(60%);
+    box-shadow: 0 0.2rem 1rem 0.2rem rgb(0 255 254 / 35%) !important;
+}
+
+.works{
+    background: black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.works h1{
+    color: white;
+    font-size: 200%;
+}
+
+.works h1 span{
+    color: #00ddb9;
+}
+
+.works p{
+    font-size: 150%;
+    color: white;
+}
+
+.works .works-content{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.works .works-content .works-content-item{
+    padding: 10px 10px;
+    background: #222;
+    max-width: 650px;
+    margin: 10px 10px;
+}
+
+.works .works-content .works-content-item img{
+    max-width: 100%;
+    height: 350px;
+}
+
+.contact{
+    background: #2d2f2e;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contact h1{
+    font-size: 200%;
+    color: whitesmoke;
+}
+
+.contact p{
+    font-size: 150%;
+    color: whitesmoke;
+}
+  
+.contact .content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 15px;
+}
+  
+.contact .content a img {
+    max-width: 100%;
+    height: 140px;
+}
+
+
+/*footer*/
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+
+}
+
+.pie-pagina .Grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .Grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.pie-pagina .Grupo-1 .box figure img{
+    width: 250px;
+}
+
+.pie-pagina .Grupo-1 .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.pie-pagina .Grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+
+}
+
+.pie-pagina .Grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transform: all 300ms ease;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .Grupo-1 .red-social a:hover{
+    color:#00c3de;
+}
+
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 10px 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+i{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 13px;
+
+}
+/* fin footer*/
+
+
+
+/*Media Queries Vertical*/
+@media (max-width: 1444px) {
+    .banner .banner-text{
+        font-size: 280%; /*tamaño texto del banner*/
+    }
+    .banner .banner-description{
+        font-size: 250%; /*tamaño texto del banner*/
+    }
+
+   
+}
+/* iPads (portrait/vertical) */
+@media (max-width : 1024px){
+    
+    .pie-pagina .Grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 1% 1%;
+    }
+
+    .pie-pagina .grupo-2 small{
+        font-size: 10px;
+    }
+
+    .header{
+        height: 60px; /*achicamos el largo del header*/
+    }
+    .header .nav .logo{
+        font-size: 1.563em; /*25px tamaño letra*/
+        padding: 0 1.250em; /*20px de ancho*/
+        line-height: 60px; /*alto de linea, logo centrado en el header*/
+    }
+    .header .nav .nav-menu{
+        flex-direction: column; /*elementos del nav uno arriba de otro*/
+        align-items: center; /*centramos los elementos*/
+        background-color: #2c3e50; /*color del nav-menu*/
+        position: fixed;
+        left: 0;
+        top: 60px; /*posicion de 60px para que se vea el header*/
+        width: 100%; /*ancho del nav-menu*/
+        height: calc(100vh - 60px); /*100% - altura del nav-menu*/
+        overflow-y: auto; /*cada vez que se necesite el scroll/ruedita lo añadirá*/
+        padding: 1.250em 0; /*relleno arriba y abajo 20px 0 a los lados*/
+        left: 100%; /*importante para mover el menu de izquierda a derecha*/
+        transition: left 0.3s; /*transición */
+    }
+    .header .nav .nav-menu .nav-menu-item{
+        line-height: 70px; /*alto de linea elementos nav en menu*/
+    }
+    .header .nav .nav-menu .nav-menu-item a:hover{
+        background: none;
+        color: #ff9800; /*color al pasar el mouse por elementos nav*/
+    }
+    .header .nav .nav-toggle{
+        display: block; /*ocultamos boton menu en laptops/pc*/
+    }
+    .header .nav .nav-menu_visible{
+        left: 0; /*hacemos que el menu sea invisible*/
+    }
+    .banner{
+        background-position:center; /*posición de imagen de fondo*/
+    }
+    .banner .banner-text{
+        font-size: 200%; /*tamaño texto del banner*/
+    }
+    .banner .banner-description{
+        font-size: 170%; /*tamaño texto del banner*/
+    }
+    .about{
+        padding-top: 15px;
+    }
+    .about .about-content{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 25px;
+    }
+    .about .about-content .about-text p{
+        font-size: 100%;
+    }
+    .skills p{
+        font-size: 100%;
+    }
+    .knowledge p{
+        font-size: 100%;
+    }
+    .works p{
+        font-size: 100%;
+    }
+    .works .works-content .works-content-item img{
+        height: auto;
+    }
+    .contact p{
+        font-size: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .banner .banner-text{
+        font-size: 130%; /*tamaño texto del banner*/
+    }
+    .banner .banner-description{
+        font-size: 120%; /*tamaño texto del banner*/
+    }
+
+}
+
+@media (max-width: 460px) {
+    .banner .banner-text{
+        font-size: 120%; /*tamaño texto del banner*/
+    }
+    .banner .banner-description{
+        font-size: 110%; /*tamaño texto del banner*/
+    }
+}
+
+@media only screen and (min-device-width : 280px) and (max-device-width : 459px) {
+    .banner .banner-text{
+        font-size: 90%; /*tamaño texto del banner*/
+    }
+    .banner .banner-description{
+        font-size: 80%; /*tamaño texto del banner*/
+    }
+}

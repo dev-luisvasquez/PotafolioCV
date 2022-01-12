@@ -1,103 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="css/style.css">
-      <!--google fonts-->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <title>Luis Vasquez</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Vasquez</title>
+    <!-- enlazamos los estilos -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- enlazamos font awesome -->
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700&display=swap" rel="stylesheet">    <script defer src="assets/js/index.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/logo LV.png" sizes="16x16">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/logo LV.png" sizes="32x32">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/logo LV.png" sizes="16x16">
 </head>
 <body>
-      
-  <!-- header -->
-  <header class="header"> 
-      <div class="logo">
-        <h1>Luis Vasquez</h1>
-      </div>
-        <nav class="menu">
-          <a href="#"><i class="fas fa-briefcase"></i> Portafolio</a>
-          <a href="#"><i class="fas fa-rocket"></i> Proyectos</a>
-          <a href="#"><i class="fas fa-atom"></i> Habilidades</a>
-          <a href="#"><i class="fas fa-user-edit"></i> Contacto</a>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">Luis Vasquez</a>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="#header" class="nav-menu-link">Inicio</a></li>
+                <li class="nav-menu-item"><a href="#about" class="nav-menu-link">Sobre Mí</a></li>
+                <li class="nav-menu-item"><a href="#skills" class="nav-menu-link">Habilidades</a></li>
+                <li class="nav-menu-item"><a href="#knowledge" class="nav-menu-link">Conocimientos</a></li>
+                <li class="nav-menu-item"><a href="#works" class="nav-menu-link">Proyectos</a></li>
+                <li class="nav-menu-item"><a href="#contact" class="nav-menu-link">Contacto</a></li>
+            </ul>
         </nav>
-
-  </header>
-    <!-- fin header -->
-    <!-- banner -->
-  <div class="banner" >
-    <div class="banner-text">
-      <p>HELLO WORLD, soy</p>
-      <ul>
-        <li>Luis Vasquez</li>
-        <li>Ing. Informatico</li>
-        <li>Desarrollador Web</li>
-        <li>Gamer</li>
-      </ul>  
-    </div>
-    <div class="banner-description">
-      <p>
-        "EL MEJOR MODO DE PREDECIR EL FUTURO ES INVENTANDOLO""</p>
-    </div>
-    
-  </div>
-    <!--Fin banner-->
-    <!--Estructura-->
-  <div class="container">
-    <h1 id="title">¿Quien soy?</h1>
-      <div class="me">
-        <p>Me llamo Luis Vasquez, estoy en mi ultimo año de ingenieria informatica en Duoc UC, me gusta programar y aprender cosas nuevas</p>
-      </div>
-  </div>
-      
-  
-  <div class="imgme">
-    <img src="img/pngegg.png" alt="">
-  </div>
-
-  <section class="content">
-    <h1 id="title2">Habilidades</h1>
-        <div class="skill">
-          <ul>
-            <h4>Lenguajes:</h4>
-            <li>css</li>
-            <li>java</li>
-            <li>HTML 5</li>
-          </ul>
-          <ul>
-            <h4>Framework</h4>
-            <li>Laravel 8</li>
-          </ul>
+    </header>
+    <section class="banner" id="header">
+        <div class="banner-text">
+            <p>Hellow World, yo soy</p>
+            <ul>
+                <li>Luis Vasquez</li>
+                <li>Desarrollador de Software</li>
+                <li>Ingeniero Informatico</li>
+            </ul>
         </div>
-        
-        <div class="proyect">
-          <h1 id="title3">Proyectos</h1>
-          <ul>
-            <li>proyecto 1</li>
-            <li>proyecto 2</li>
-            <li>etc</li>
-            <li>etc</li>
-            <li>etc</li>
-          </ul>
+        <div class="banner-description">
+            <p>"LA MEJOR FORMA DE PREDECIR EL FUTURO EL INVENTARLO"</p>
         </div>
-  </section>
-        
-  
-      <!-- fin estructura -->
+    </section>
+    <section class= "about"  id="about">
+        <h1>¿Quién Soy?</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hola ✌, yo soy Diego Donoso, egresado en Técnico Analista Programador desde DUOC UC. Tengo 22 años, soy Chileno viviendo actualmente en Santiago. Me inicié en la programación a finales de 2011 con un lenguaje de programación llamado Pawn (lenguaje usado para programar modo de juegos en el juego GTA San Andreas en línea). Tengo conocimientos básicos en backend y frontend. Me gusta el diseño de los sistemas e interfaces web, el minimalismo, aprender cosas nuevos y afrontar los nuevos retos. Mis mayores pasatiempos son los videojuegos y programar.</p>
+                <a href="https://drive.google.com/file/d/1C_ICXqve1N4gizazhwN9YELneNOCT3KO/view" target = "blank" class="btn">DESCARGAR CV</a>
+            </div>
+            <div class="w50">
+                <img src="assets/images/astro.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <h1><span>Habilidades </span>Que poseo</h1>
+        <p>Estas son algunas de las principales habilidades que poseo para desarrollar de manera eficaz alguna tarea.</p>
+        <div class="skills-content">
+            <div class="skills-text">
+                <img src="assets/images/creatividad.svg"alt="">
+                <h2>Creatividad</h2>
+                <p>Proporciono ideas creativas al momento de proponer soluciones para aplicaciones web y de escritorio para hacer mas dinámica la experiencia de usuario.</p>
+            </div>
+            <div class="skills-text">
+                <img src="assets/images/analisis.svg" alt="">
+                <h2>Análisis</h2>
+                <p>Capacidad analítica para identificar problemas y encontrar soluciones utilizando las herramientas tecnológicas actuales del mercado.</p>
+            </div>
+            <div class="skills-text">
+                <img src="assets/images/bd.svg" alt="">
+                <h2>Modelamiento BD</h2>
+                <p>Conocimientos sobre como implementar las nuevas soluciones a nivel de base de datos, relaciones, modelos, tablas y manipulación de datos.</p>
+            </div>
+            <div class="skills-text">
+                <img src="assets/images/web-dev.svg" alt="">
+                <h2>Desarrollo de Software</h2>
+                <p>Manejo las tecnologías necesarias para desarrollar un sistema. Desde la interfaz hasta las funcionalidades.</p>
+            </div>
+        </div>
+    </section>
+    <section class="knowledge" id="knowledge">
+        <h1><span>Tecnologías </span> Que utilizo</h1>
+        <p>Estas son algunas de las tecnologías que manejo, pero en caso de que el proyecto necesite de otras se pueden estudiar, aprender e implementar.</p>
+        <div class="knowledge-tittle">
+            <h2>FRONTEND</h2>
+        </div>   
+        <div class="knowledge-content"> 
+            <div class="image-box">
+                <img src="assets/images/html5.webp" height="100" width="100" alt="logo de html5" data-toggle="tooltip" data-placement="top" title="HTML5" />
+            </div>
+            <div class="image-box">
+                <img src="assets/images/css3.webp" height="100" width="100" alt="logo de css3" data-toggle="tooltip" data-placement="top" title="CSS3" />
+            </div>
+            <div class="image-box">
+                <img src="assets/images/js-logo.webp" height="100" width="100" alt="logo de javascript" data-toggle="tooltip" data-placement="top" title="JAVASCRIPT" />
+            </div>
+            <div class="image-box">
+                <img src="assets/images/bootstrap-logo.webp" height="100" width="100" alt="logo de bootstrap" data-toggle="tooltip" data-placement="top" title="BOOTSTRAP" />
+            </div>
+        </div>
+        <div class="knowledge-tittle">
+            <h2>BACKEND</h2>
+        </div>   
+        <div class="knowledge-content"> 
+            <div class="image-box">
+                <img src="assets/images/java.webp" height="100" width="100" alt="logo de html5" data-toggle="tooltip" data-placement="top" title="JAVA" />
+            </div>
+            <div class="image-box">
+                <img src="assets/images/python.webp" height="100" width="100" alt="logo de css3" data-toggle="tooltip" data-placement="top" title="PYTHON" />
+            </div>
+            <div class="image-box">
+                <img src="assets/images/django.webp" height="100" width="100" alt="logo de javascript" data-toggle="tooltip" data-placement="top" title="DJANGO" />
+            </div>
+        </div>
+        <div class="knowledge-tittle">
+            <h2>BASES DE DATOS</h2>
+        </div>   
+        <div class="knowledge-content"> 
+            <div class="image-box">
+                <img src="assets/images/mysql.webp" height="100" width="100" alt="logo de html5" data-toggle="tooltip" data-placement="top" title="MYSQL" />
+            </div>
+            <div class="image-box">
+                <img src="assets/images/oracle.webp" height="100" width="100" alt="logo de css3" data-toggle="tooltip" data-placement="top" title="ORACLE" />
+            </div>
+        </div>
+        <div class="knowledge-tittle">
+            <h2>CONTROL DE VERSIONES</h2>
+        </div>   
+        <div class="knowledge-content"> 
+            <div class="image-box">
+                <img src="assets/images/git.webp" height="100" width="100" alt="logo de html5" data-toggle="tooltip" data-placement="top" title="GIT" />
+            </div>
+        </div>
+    </section>
+    <section class="works" id="works">
+        <h1>Mira mis más recientes <span>proyectos de ahora</span></h1>
+        <p>Listado de los proyectos que he realizado. Puedes ir a cada proyecto pinchando la imagen.</p>
+        <div class="works-content">
+            <div class="works-content-item">
+                <a href="https://dev-diegov.github.io/dental/" target="blank">
+                    <img src="assets/images/work1.webp" alt="Clinica Dental">
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="pie-pagina">
+        <div class="Grupo-1">
+              <div class="box">
+                    <figure>
+                          <a href="">
+                                <img src="./assets/images/Logo LV foother.png" alt="">
+                          </a>
+                    </figure>
+              </div>
 
-      <!--footer-->
-      contacto logos y demas
-      <!--Fin footer-->
+              <div class="box">
+                    <h2>Mas Vistos</h2>
+                    <li><a href="#skills">Habilidades</a></li>    
+              </div>
 
-      
+                <div class="box">
+                    <h2>SIGUENOS</h2>
+                    <div class="red-social">
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href=""><i class="fab fa-linkedin"></i></a>
+                          <a href=""><i class="fab fa-github"></i></a>
+                          
+                </div>
+                    
 
-      <!-- script -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-      <!-- fin script -->
+              </div>
+        </div>
+        <div class="grupo-2">
+              <small><b>Create and Design </b>Luis Vasquez</small>
+              <br>
+              <small>&copy; 2021 <b>Luis Vasquez Portafolio</b> - Todos los Derechos Reservados </small>
+        </div>
+  </footer>
 </body>
-      
 </html>
