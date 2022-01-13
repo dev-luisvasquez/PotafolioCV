@@ -17,19 +17,19 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #ff9800;
-    outline: 1px solid #ff9800;
+    background-color: #228aca;
+    outline: 1px solid #228aca;
 }
 
 .header{
-    background-color: #0000003f; /*color del header*/
+    background-color: #00000031; /*color del header*/
     backdrop-filter: blur(0.8rem); /*transparencia del color*/
     height: 80px; /*altura del header*/
     position: fixed; /*fijamos header a la pantalla*/
     width: 100%; /*ancho del 100% del header*/
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 99;    
 }
 
 .header .nav{
@@ -38,6 +38,7 @@ body::-webkit-scrollbar-thumb {
     max-width: 1500px; /*ancho del nav con límite para pantallas grandes*/
     margin: 0 auto; /*centramos los elementos del nav*/
 }
+
 
 .header .nav .logo{
     font-size: 200%; /*30px tamaño letra 1.875em*/
@@ -63,6 +64,7 @@ body::-webkit-scrollbar-thumb {
     display: flex; /*formato flex*/
     margin-right: 2.500em; /*distancia de elementos y margen derecho*/
     list-style: none; /*quitamos los puntos de los elementos*/
+    backdrop-filter: blur(0.8rem);
 }
 
 .header .nav .nav-menu .nav-menu-item{
@@ -79,9 +81,14 @@ body::-webkit-scrollbar-thumb {
     padding: 0.500em 0.750em; /*relleno de 8px arriba abajo y 12 a los lados*/
     border-radius: 3px; /*borde del padding/relleno*/
 }
+.header .nav .nav-menu .nav-menu-item i{
+    margin-right:10px ;
+    text-align: center;
+    
+}
 
 .header .nav .nav-menu .nav-menu-item a:hover{
-    background-color: #ff9800; /*color en el padding al pasar el mouse en los elementos del nav*/
+    background-color: #00c3de; /*color en el padding al pasar el mouse en los elementos del nav*/
     transition: 0.5s; /*transición al pasar el mouse por cada elemento del nav*/
 }
 
@@ -139,7 +146,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .banner .banner-text ul{
-    color: #ff9800;
+    color: #177bb9;
     padding-left: 10px;
     list-style: none; /*quitamos los puntos de la lista*/
     animation: change-banner-text-ul 6s infinite;
@@ -162,7 +169,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .about{
-    background: #1f4277;
+    background-image: linear-gradient(#181257,#04a3de);
     text-align: center;
     padding-top: 15px;
 }
@@ -170,7 +177,7 @@ body::-webkit-scrollbar-thumb {
 .about h1{
     font-size: 200%;
     color: #fff;
-    background-color: #ff9800;
+    background-color: #177bb9;
     font-weight: bold;
     padding: 7px 5px;
     width: 50%;
@@ -194,7 +201,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .about .about-content .about-text .btn{
-    background: #ff9800; /*color fondo del botón*/
+    background: #7073CA; /*color fondo del botón*/
     display: inline-block; /*elemento en linea con formato blockdonde se pueden aplicar valores height y width*/
     color:#fff; /*color letra*/
     margin-top: 1.250em; /*margen de arriba 20px*/
@@ -203,6 +210,7 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase; /*letras en mayúsculas*/
     text-decoration: none; /*quitamos subrayado*/
     letter-spacing: 0.125em; /*2px - espacio entre letras*/ 
+    border-radius: 20px;
 }
 
 .w50{
@@ -214,7 +222,7 @@ img{
 }
 
 .skills{
-    background: #9d5bb5;
+    background-image: linear-gradient(#04a3de 0%,#aa4fe7 80%);
     text-align: center;
     padding: 20px 0;
     color: whitesmoke;
@@ -226,7 +234,7 @@ img{
 }
 
 .skills h1 span{
-    color: #00ddb9;
+    color: #362b4b;
 }
 
 .skills p{
@@ -243,27 +251,30 @@ img{
 
 .skills .skills-content .skills-text{
     padding: 8px  40px;
-    color: whitesmoke;
+    color: #70d6a3;
     max-width: 240px;
     margin: 25px;
-    background: #557dce;
+    background: #2365795b;
     border-radius: 15px;
 }
 
 .skills .skills-content .skills-text h2{
     font-size: 150%;
+    margin-top: 10px;
 }
 
 .skills .skills-content .skills-text p{
     font-size: 100%;
+    margin-top: 5px;
 }
 
 .skills .skills-content .skills-text img{
     height: 35%;
+    margin-top: 30px;
 }
 
 .knowledge{
-    background: #2d2f2e;
+    background-image: linear-gradient(#aa4fe7 10%,#181257);
     text-align: center;
     padding: 20px 0;
 }
@@ -274,7 +285,7 @@ img{
 }
 
 .knowledge h1 span{
-    color: #00ddb9;
+    color: #57d4f6;
 }
 
 .knowledge p{
@@ -290,7 +301,7 @@ img{
 .knowledge .knowledge-tittle h2{
     font-size: 180%;
     color: #fff;
-    background-color: #1887b3;
+    background-color: #094f88;
     font-weight: bold;
     padding: 7px 5px;
     width: max-content;
@@ -308,27 +319,30 @@ img{
 .knowledge .knowledge-content .image-box {
     height: 100px;
     width: 100px;
-    margin: 5px 10px;
+    margin: 5px 20px;
 }
   
-.knowledge .knowledge-content .image-box img {
-    height: 100%;
-    object-fit: cover;
-    max-width: 100%;
-    border-radius: 50%;
-    background: black;
-    /* box-shadow: 0 0.2rem 1rem 0.3rem rgb(0 255 254 / 35%) !important; */
-    transition: 0.3s ease-in-out;
+.knowledge .knowledge-content .image-box i{
+    font-size: 100px;
 }
 
+.knowledge .knowledge-content .image-box img{
+    width: 100px;
+    height: 100px;
+    
+}
+.knowledge .knowledge-content .image-box i:hover {
+    transform: translateY(-8px);
+    
+}
 .knowledge .knowledge-content .image-box img:hover {
     transform: translateY(-8px);
-    filter: brightness(60%);
-    box-shadow: 0 0.2rem 1rem 0.2rem rgb(0 255 254 / 35%) !important;
+    
 }
 
 .works{
-    background: black;
+    background-image:url("/assets/images/fondoproyectos.jpg");
+    background-size: 100%;
     text-align: center;
     padding: 20px 0;
 }
@@ -339,7 +353,7 @@ img{
 }
 
 .works h1 span{
-    color: #00ddb9;
+    color: #57d4f6;
 }
 
 .works p{
@@ -423,18 +437,30 @@ img{
 
 .pie-pagina .Grupo-1 .box figure img{
     width: 250px;
+    cursor: default;
 }
 
 .pie-pagina .Grupo-1 .box h2{
     color: white;
     margin-bottom: 25px;
     font-size: 15px;
+    cursor:default;
 }
 
 .pie-pagina .Grupo-1 .box p{
     color: #efefef;
     margin-bottom: 10px;
+}
+.pie-pagina .Grupo-1 li{
+    
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+}
 
+.pie-pagina .Grupo-1 a{
+    text-decoration: none;
+    color: #00c3de;
 }
 
 .pie-pagina .Grupo-1 .red-social a{
@@ -513,7 +539,7 @@ i{
     .header .nav .nav-menu{
         flex-direction: column; /*elementos del nav uno arriba de otro*/
         align-items: center; /*centramos los elementos*/
-        background-color: #2c3e50; /*color del nav-menu*/
+        background-color: #2b3a85; /*color del nav-menu*/
         position: fixed;
         left: 0;
         top: 60px; /*posicion de 60px para que se vea el header*/
@@ -529,7 +555,7 @@ i{
     }
     .header .nav .nav-menu .nav-menu-item a:hover{
         background: none;
-        color: #ff9800; /*color al pasar el mouse por elementos nav*/
+        color: #00c3de; /*color al pasar el mouse por elementos nav*/
     }
     .header .nav .nav-toggle{
         display: block; /*ocultamos boton menu en laptops/pc*/
